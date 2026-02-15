@@ -57,6 +57,12 @@ Delphi is yet to support specifying foreground service type, so it is necessary 
 
 If your own project uses a different name for the service, change the `android:name` attribute accordingly.
 
+### Compiling/deploying
+
+Ensure that you load the `ABLStickGroup.groupproj` project, as the group includes the service, which the app needs in order to work.
+
+Compile the app **and** service for 32-bit **first**. This will generate the `ABLStickyService.jar` file which is added to the Android 32-bit target in the app. After this, you can compile/deploy for 64-bit.
+
 ## Technical Notes
 
 ### Service
